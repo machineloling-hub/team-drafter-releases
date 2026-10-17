@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>team_drafter</title>
+  <meta name="description" content="The download page for team_drafter, the machineloling team draft app." />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0d12;
+      --card: #151922;
+      --border: #262c3a;
+      --fg: #e6e9ef;
+      --muted: #8d95a5;
+      --primary: #5cc8ff;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
+    h1 { font-size: 28px; margin: 0 0 4px; }
+    h1 span { color: var(--primary); }
+    .sub { color: var(--muted); margin: 0 0 28px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 0 0 16px; }
+    .dl { display: inline-block; padding: 12px 20px; border-radius: 10px; background: var(--primary); color: #06121a; font-weight: 700; text-decoration: none; }
+    .dl[aria-disabled="true"] { background: var(--border); color: var(--muted); pointer-events: none; }
+    .meta { color: var(--muted); font-size: 13px; margin-top: 10px; }
+    .notes { margin-top: 10px; white-space: pre-wrap; }
+    h2 { font-size: 16px; margin: 0 0 8px; }
+    ol, ul { margin: 0; padding-left: 20px; }
+    li { margin: 4px 0; }
+    code { background: #0f1218; border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; font-size: 13px; }
+    footer { color: var(--muted); font-size: 13px; margin-top: 24px; }
+    a { color: var(--primary); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Machine<span>LoL</span>ing team_drafter</h1>
+    <p class="sub">The draft app for our team. Windows only.</p>
+
+    <section class="card">
+      <a id="dl" class="dl" href="#" aria-disabled="true">Loading the latest build…</a>
+      <div id="meta" class="meta"></div>
+      <div id="notes" class="notes"></div>
+    </section>
+
+    <section class="card">
+      <h2>Install</h2>
+      <ol>
+        <li>Run the installer. Windows may say the app is unrecognized the first time: click <em>More info</em>, then <em>Run anyway</em>.</li>
+        <li>Open team_drafter. Create an account with your email and the code it sends, or sign in if you already have a machineloling account. Joe approves new accounts.</li>
+        <li>On the Team tab, paste the drafter.lol link, click our side, and pick the seat you play.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>What it does</h2>
+      <ul>
+        <li>Follows the drafter.lol draft live: bans, picks, whose turn it is.</li>
+        <li>Scores the board the way machineloling.gg does: the win model, synergies, matchups, your pool against the board, ban targets.</li>
+        <li>Links teammates on the same draft: everyone running the app on our side shares their account, mastery and pool.</li>
+        <li>Looks opposing players up by Riot ID: rank, mastery and recency on every champion.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Updates</h2>
+      <p style="margin:0">There is no auto-update. When a new build is posted here, run the new installer over the old one.</p>
+    </section>
+
+    <footer>Private build for the team. Questions go to Joe. <a href="https://machineloling.gg">machineloling.gg</a></footer>
+  </main>
+  <script>
+    (async () => {
+      const dl = document.getElementById("dl");
+      const meta = document.getElementById("meta");
+      const notes = document.getElementById("notes");
+      try {
+        const r = await fetch("latest.json", { cache: "no-store" });
+        if (!r.ok) throw new Error(String(r.status));
+        const j = await r.json();
+        if (!j.url) throw new Error("no build yet");
+        dl.href = j.url;
+        dl.removeAttribute("aria-disabled");
+        dl.textContent = `Download team_drafter ${j.version}`;
+        const mb = j.size ? ` · ${(j.size / 1048576).toFixed(1)} MB` : "";
+        const when = j.publishedAt ? ` · ${new Date(j.publishedAt).toLocaleDateString()}` : "";
+        meta.textContent = `${j.file || ""}${mb}${when}`;
+        notes.textContent = j.notes || "";
+      } catch (e) {
+        dl.textContent = "No build posted yet";
+        meta.textContent = "";
+      }
+    })();
+  </script>
+</body>
+</html>
