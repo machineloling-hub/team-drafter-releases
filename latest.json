@@ -1,8 +1,8 @@
 {
-  "version": "0.1.0",
-  "url": "https://github.com/machineloling-hub/team-drafter-releases/releases/download/v0.1.0/team_drafter_0.1.0_x64-setup.exe",
-  "file": "team_drafter_0.1.0_x64-setup.exe",
-  "size": 11622032,
-  "publishedAt": "2026-10-17T00:37:14Z",
-  "notes": "team_drafter 0.1.0"
+  "version": "0.1.1",
+  "url": "https://github.com/machineloling-hub/team-drafter-releases/releases/download/v0.1.1/team_drafter_0.1.1_x64-setup.exe",
+  "file": "team_drafter_0.1.1_x64-setup.exe",
+  "size": 11637600,
+  "publishedAt": "2026-10-20T22:18:22Z",
+  "notes": "Likely picks: mark up to three champions you expect to lock, and what you expect each enemy to lock; marks and enemy rosters are shared with linked teammates and weigh on the ban targets."
 }
