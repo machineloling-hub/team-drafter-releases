@@ -1,8 +1,8 @@
 {
-  "version": "0.1.2",
-  "url": "https://github.com/machineloling-hub/team-drafter-releases/releases/download/v0.1.2/team_drafter_0.1.2_x64-setup.exe",
-  "file": "team_drafter_0.1.2_x64-setup.exe",
-  "size": 11693008,
-  "publishedAt": "2026-10-21T14:46:42Z",
-  "notes": "Draft sheet: in a team draft, our next picks and bans ranked by playing the draft forward against the enemy roster, with the replies it expects and the outcome range. Fewer pool reads per install: one members read per role, and no boot warm-up without a draft."
+  "version": "0.1.3",
+  "url": "https://github.com/machineloling-hub/team-drafter-releases/releases/download/v0.1.3/team_drafter_0.1.3_x64-setup.exe",
+  "file": "team_drafter_0.1.3_x64-setup.exe",
+  "size": 11692472,
+  "publishedAt": "2026-10-21T21:06:50Z",
+  "notes": "Draft sheet rules: don't blind support. Support picks are held back while either seat of the enemy bot lane is open, the same way top is held while their top is open."
 }
