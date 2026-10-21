@@ -1,8 +1,8 @@
 {
-  "version": "0.1.1",
-  "url": "https://github.com/machineloling-hub/team-drafter-releases/releases/download/v0.1.1/team_drafter_0.1.1_x64-setup.exe",
-  "file": "team_drafter_0.1.1_x64-setup.exe",
-  "size": 11637600,
-  "publishedAt": "2026-10-20T22:18:22Z",
-  "notes": "Likely picks: mark up to three champions you expect to lock, and what you expect each enemy to lock; marks and enemy rosters are shared with linked teammates and weigh on the ban targets."
+  "version": "0.1.2",
+  "url": "https://github.com/machineloling-hub/team-drafter-releases/releases/download/v0.1.2/team_drafter_0.1.2_x64-setup.exe",
+  "file": "team_drafter_0.1.2_x64-setup.exe",
+  "size": 11693008,
+  "publishedAt": "2026-10-21T14:46:42Z",
+  "notes": "Draft sheet: in a team draft, our next picks and bans ranked by playing the draft forward against the enemy roster, with the replies it expects and the outcome range. Fewer pool reads per install: one members read per role, and no boot warm-up without a draft."
 }
