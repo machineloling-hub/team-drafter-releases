@@ -1,8 +1,8 @@
 {
-  "version": "0.1.5",
-  "url": "https://github.com/machineloling-hub/team-drafter-releases/releases/download/v0.1.5/team_drafter_0.1.5_x64-setup.exe",
-  "file": "team_drafter_0.1.5_x64-setup.exe",
-  "size": 11735968,
-  "publishedAt": "2026-10-25T19:18:13Z",
-  "notes": "The full draft network now runs on your machine. The win chance in the Picks grid and the draft search come from the same model the service uses, with the lane matchup tables. It replaces the small copy the app ran before. The win chance averages three networks. The draft search uses one of them to keep its speed, and runs at low priority so your game and client stay smooth. The model (33 MB) downloads after you sign in with an approved account and refreshes every six hours. The installer carries no weights. Until the model has downloaded, the app asks the service as before."
+  "version": "0.1.6",
+  "url": "https://github.com/machineloling-hub/team-drafter-releases/releases/download/v0.1.6/team_drafter_0.1.6_x64-setup.exe",
+  "file": "team_drafter_0.1.6_x64-setup.exe",
+  "size": 11836024,
+  "publishedAt": "2026-10-27T00:44:00Z",
+  "notes": "New draft sim with advice for all five roles. Phase-two bans read the coming picks, best pair first. The draft board shows your plan in pick order. Lobby comp search. Ranked 5s seats fixed. Replays of recorded drafts."
 }
